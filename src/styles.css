@@ -1,1 +1,138 @@
 /* You can add global styles to this file, and also import other style files */
+/***********Global Rules***********/
+html {
+  box-sizing: border-box;
+  line-height: 1.5;
+  direction: ltr;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+  background: #fff;
+  margin: 0;
+  background-color: #f8f9fa !important;
+  overflow-x: hidden;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+  min-width: 272px;
+}
+
+blockquote {
+  color: #34383b;
+  font-size: 1.2rem;
+}
+
+a {
+  color: #7952b3;
+}
+
+.container {
+  /* min-height: 100vh; */
+  max-width: 1140px;
+  min-width: 576px;
+}
+
+
+/***********header***********/
+.bd-navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  background-color: #7952b3;
+}
+
+.bd-navbar .navbar-nav .nav-link,
+.navbar-brand {
+  color: white;
+}
+
+
+/***********search***********/
+.search {
+  /* position: sticky; */
+  /* top: 40px; */
+  bottom: 0px;
+  z-index: 999;
+  background-color: #f8f9fa;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.search-button {
+  max-width: 72px;
+}
+
+
+/***********form***********/
+.form-check {
+  position: relative;
+}
+
+.form-inline .form-check {
+  max-width: 5rem;
+}
+
+.form-check-inline .form-check-input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.form-check-input:checked+label {
+  color: white;
+  background-color: #007bff;
+}
+
+.form-check-label {
+  max-width: 5rem;
+  min-width: 5rem;
+}
+
+
+/***********index-main***********/
+.pop-in-loc,
+.pop-in-town,
+.story,
+.ad {
+  max-width: 80%;
+}
+
+.pop-in-loc>div,
+.pop-in-town>div {
+  overflow-x: scroll;
+}
+
+.card-body {
+  padding: 6px;
+}
+
+.card-body p {
+  margin-bottom: 0;
+}
+
+.card-boyd h6 {
+  margin-bottom: 1rem;
+}
+
+.story {
+  margin-top: 6rem;
+  position: relative;
+}
+
+.story .greeting {
+  top: -15px;
+  position: absolute;
+  z-index: 999;
+  background-color: #f8f9fa;
+}
+
+.ad * {
+  margin-right: 20%;
+}

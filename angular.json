@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "LocaMall"
+    }
+  },
+  "defaultProject": "LocaMall",
+  "cli": {
+    "analytics": false
+  }
 }
