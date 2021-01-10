@@ -1,0 +1,25 @@
+<div class="search mt-3 pt-3 pb-4">
+    <form action="search.php" class="form-inline col-9 justify-content-center mx-auto">
+        <div class="row col-10 flex-nowrap">
+            <input class="form-control col-9 col-md-10" type="search" aria-autocomplete="list" autocomplete="off"
+                maxlength="200" placeholder="Search...">
+            <button class="search-button btn btn-outline-success col-3 col-md-2 ml-1" type="submit">Search</button>
+        </div>
+        <fieldset class="d-flex col-10 mt-2 flex-nowrap justify-content-start">
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="search-option" id="search-all" value="all" checked>
+                <label class="form-check-label btn btn-outline-primary py-0 px-1" for="search-all">all</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="search-option" id="search-product" value="all">
+                <label class="form-check-label btn btn-outline-primary py-0 px-1" for="search-product">Product</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="search-option" id="search-service" value="service">
+                <label class="form-check-label btn btn-outline-primary py-0 px-1" for="search-service">Service
+                </label>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
