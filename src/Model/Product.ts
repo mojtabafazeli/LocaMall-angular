@@ -1,9 +1,10 @@
 class Product {
-     id: string;
-     name: string;
-     price: number;
-     type: string;
-     image: string;
+    id: string;
+    name: string;
+    price: number;
+    type: string;
+    image: string;
+    rate: number;
 
     constructor(name: string, price: number, type: string) {
         this.id = name + new Date().getMilliseconds();
@@ -14,9 +15,8 @@ class Product {
 
     public get _id() {
         return this.id;
-    }
+    }   
 
-    
 }
- 
+
 export default Product;

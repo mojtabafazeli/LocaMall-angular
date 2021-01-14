@@ -6,49 +6,56 @@ export var Products = [
 		name: 'Birthday Cake',
 		price: 20,
 		type: 'product',
-		image: ''
+		image: '',
+		rate: 2
 	},
 	{
 		id: 'mhaeri098028340298502',
 		name: 'Naked Cake',
 		price: 20,
 		type: 'product',
-		image: ''
+		image: '',
+		rate: 4
 	},
 	{
 		id: 'vahid098028340298502',
 		name: 'Resume',
 		price: 20,
 		type: 'service',
-		image: ''
+		image: '',
+		rate: 3
 	},
 	{
 		id: 'mahvin098028340298502',
 		name: 'Home Design',
 		price: 120,
 		type: 'service',
-		image: ''
+		image: '',
+		rate: 5
 	},
 	{
 		id: 'gkiani098028340298502',
 		name: 'Sweets',
 		price: 40,
 		type: 'product',
-		image: ''
+		image: '',
+		rate: 1
 	},
 	{
 		id: 'bsedghi234524352345252',
 		name: 'Roll Cakes',
 		price: 20,
 		type: 'product',
-		image: ''
+		image: '',
+		rate: 4
 	},
 	{
 		id: 'bsedghi35245243523452',
 		name: 'Cupcake',
 		price: 20,
 		type: 'product',
-		image: ''
+		image: '',
+		rate: 3
 	}
 ];
 

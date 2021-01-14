@@ -6,7 +6,7 @@ class Seller {
      lastName: string;
      username: string;
      location: string;
-     catalog: Product[];
+     catalog: string[];
      rate: number = 0;
 
     constructor(firstName: string, lastName: string, username: string) {
