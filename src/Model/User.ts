@@ -1,43 +1,31 @@
-import Product from "./Product";
+import Cart from "./Cart";
+
 
 class User {
-    private _firstName: string;
-    private _lastName: string;
-    private _location: string;
-    private _cart: Product[];
+     id: string;
+      firstName: string;
+      lastName: string;
+      username: string;
+      location: string;
+      cart: Cart;
 
-    constructor(firstName: string, lastName: string) {
-        this._firstName = firstName;
-        this._lastName = lastName;
+    constructor(firstName: string, lastName: string, username: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.id = username + new Date().getMilliseconds();
     }
-
-    public set firstName(fistName) {
-        this._firstName = fistName;
-    }
-    public get firstName() {
-        return this._firstName;
-    }
-
-    public set lastName(lastName) {
-        this._lastName = lastName;
-    }
-    public get lastName() {
-        return this._lastName;
+    
+    public getId() {
+        return this.id;
     }
 
-    public set location(location) {
-        this._location = location;
-    }
-    public get location() {
-        return this._location
+    public getLocation() {
+        return this.location;
     }
 
-    public addProduct(product: Product) {
-        this._cart.push(product);
+    public createCart(cart) {
+        this.cart = cart;
     }
-    public get cart() {
-        return this._cart;
-    }
-
 }
 export default User;

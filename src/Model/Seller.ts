@@ -1,44 +1,30 @@
 import Product from './Product';
 
 class Seller {
-    private _firstName: string;
-    private _lastName: string;
-    private _location: string;
-    private _catalog: Product[];
+     id: string;
+     firstName: string;
+     lastName: string;
+     username: string;
+     location: string;
+     catalog: Product[];
+     rate: number = 0;
 
-    constructor(firstName: string, lastName:string) {
-        this._firstName = firstName;
-        this._lastName = lastName;
-    }
-
-    public set firstName(fistName) {
-        this._firstName = fistName;
-    }
-    public get firstName() {
-        return this._firstName;
+    constructor(firstName: string, lastName: string, username: string) {
+        this.id = username + new Date().getMilliseconds()
+        this.username = username;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public set lastName(lastName) {
-        this._lastName = lastName;
-    }
-    public get lastName() {
-        return this._lastName;
-    }
+}
 
-    public set location(location) {
-        this._location = location;
-    }
-    public get location() {
-        return this._location
-    }
+function addProduct(product: Product) {
+    this.catalog.push(product);
+}
 
-    public addProduct(product: Product) {
-        this._catalog.push(product);
-    }
-    public get catalog() {
-        return this._catalog;
-    }
-
+function setRate(rate: number) {
+    this.rate += rate;
+    this.rate /= 2;
 }
 
 export default Seller;

@@ -1,31 +1,33 @@
 import Product from "./Product";
 
 class Cart {
-    private _id: number;
-    private _totalPrice: number;
-    private _items: Product[];
+    private id: string;
+    private totalPrice: number;
+    private items: Product[];
+    private userId: string;
 
-    constructor() {
-        this._id = new Date().getMilliseconds();
+    constructor(userId) {
+        this.userId= userId;
+        this.id = userId + new Date().getMilliseconds();
     }
 
-    public get cartId() {
-        return this._id;
+    public getId() {
+        return this.id;
     }
-
+    
     public addItem(item: Product) {
-        this._items.push(item);
-        this._setTotalPrice(item.price);
+        this.items.push(item);
+        this.setTotalPrice(+item.price);
     }
     public getItems() {
-        return this._items;
+        return this.items;
     }
 
-    private _setTotalPrice(price: number) {
-        this._totalPrice += price; 
+    private setTotalPrice(price: number) {
+        this.totalPrice += price;
     }
-    public totalPrice() {
-        return this._totalPrice;
+    public getTotalPrice() {
+        return this.totalPrice;
     }
 };
 

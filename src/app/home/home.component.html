@@ -3,61 +3,15 @@
     <div class="pop-in-loc d-flex flex-column justify-content-center p-0 mt-5 mx-auto overflow-hidden">
         <h6 class="mb-3 font-weight-bold text-nowrap">Popular in your local</h6>
         <div id="pop-in-loc" class="row justify-content-start flex-nowrap m-0 p-2 border rounded-lg">
-            <div class="card mr-3" style="min-width: 150px;">
+            <div *ngFor="let product of localProducts, index as i" class="card mr-3" style="min-width: 150px;">
                 <img src="popular-local/cake1.jpeg" class="card-img-top img-thumbnail rounded"
                     style="height: 145px; width:auto" alt="" />
                 <div class="card-body">
-                    <h6 class="card-text text-center">Birthday Cake</h6>
+                    <h6 class="card-text text-center">{{product.name}}</h6>
                     <p class="card-text text-center">by</p>
-                    <h6 class="card-text text-center font-weight-bold">Maria</h6>
+                    <h6 class="card-text text-center font-weight-bold"></h6>
                 </div>
             </div>
-            <div class="card mr-3" style="min-width: 150px;">
-                <img src="popular-local/cake1.jpeg" class="card-img-top img-thumbnail rounded"
-                    style="height: 145px; width:auto" alt="" />
-                <div class="card-body">
-                    <h6 class="card-text text-center">Birthday Cake</h6>
-                    <p class="card-text text-center">by</p>
-                    <h6 class="card-text text-center font-weight-bold">Maria</h6>
-                </div>
-            </div>
-            <div class="card mr-3" style="min-width: 150px;">
-                <img src="popular-local/cake1.jpeg" class="card-img-top img-thumbnail rounded"
-                    style="height: 145px; width:auto" alt="" />
-                <div class="card-body">
-                    <h6 class="card-text text-center">Birthday Cake</h6>
-                    <p class="card-text text-center">by</p>
-                    <h6 class="card-text text-center font-weight-bold">Maria</h6>
-                </div>
-            </div>
-            <div class="card mr-3" style="min-width: 150px;">
-                <img src="popular-local/cake1.jpeg" class="card-img-top img-thumbnail rounded"
-                    style="height: 145px; width:auto" alt="" />
-                <div class="card-body">
-                    <h6 class="card-text text-center">Birthday Cake</h6>
-                    <p class="card-text text-center">by</p>
-                    <h6 class="card-text text-center font-weight-bold">Maria</h6>
-                </div>
-            </div>
-            <div class="card mr-3" style="min-width: 150px;">
-                <img src="popular-local/cake1.jpeg" class="card-img-top img-thumbnail rounded"
-                    style="height: 145px; width:auto" alt="" />
-                <div class="card-body">
-                    <h6 class="card-text text-center">Birthday Cake</h6>
-                    <p class="card-text text-center">by</p>
-                    <h6 class="card-text text-center font-weight-bold">Maria</h6>
-                </div>
-            </div>
-            <div class="card mr-3" style="min-width: 150px;">
-                <img src="popular-local/cake1.jpeg" class="card-img-top img-thumbnail rounded"
-                    style="height: 145px; width:auto" alt="" />
-                <div class="card-body">
-                    <h6 class="card-text text-center">Birthday Cake</h6>
-                    <p class="card-text text-center">by</p>
-                    <h6 class="card-text text-center font-weight-bold">Maria</h6>
-                </div>
-            </div>
-
         </div>
 
     </div>
