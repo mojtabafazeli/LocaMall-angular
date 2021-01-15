@@ -60,10 +60,6 @@ export class HomeComponent implements OnInit {
       let product = products[i];
       if (product.id == id) return product;
     }
-    // //using the Array find() method to find a product by Id
-    //  return this.allProducts.find(product => 
-    //     product.id = id
-    //   );
   }
   
 }
