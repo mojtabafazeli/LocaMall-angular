@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Sellers, Users, Products } from 'src/Data/FakeData';
 import Card from 'src/Model/Card';
 import Seller from 'src/Model/Seller';
+import { SortFactory } from '../Algorithms/SortFactory';
+import { SortIndex } from '../Algorithms/SortIndex';
 
 
 @Component({
@@ -35,7 +37,9 @@ export class HomeComponent implements OnInit {
       }
     }
     console.log(JSON.stringify(this.localProductsCards))
-    this.sortList(this.localProductsCards, "productRate", 0, this.localProductsCards.length - 1);
+    let sf = new SortFactory(SortIndex.PRODUCT);
+    let sortMethod = sf.createSortMethod();
+    sortMethod.sortList(this.localProductsCards);
     console.log(JSON.stringify(this.localProductsCards))
   }
 
@@ -61,34 +65,5 @@ export class HomeComponent implements OnInit {
     //     product.id = id
     //   );
   }
-
-  //implementing sorting algorithm
-  sortList(arr, prop: string, low: number, high: number) {
-    if (low < high) {
-      let pi = this.partition(arr, prop, low, high);
-      this.sortList(arr, prop, low, pi - 1);
-      this.sortList(arr, prop, pi + 1, high);
-    }
-  }
-
-  //this is a method to find a pivot which will be used in sortList function
-  partition(arr: any, prop: string, low: number, high: number): number {
-    let pivot: number = arr[high][prop];
-    let i = (low - 1);
-    for (let j = low; j < high; j++) {
-      if (arr[j][prop] > pivot) {
-        i++;
-        //swap arr[i] and arr[j]
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-      }
-    }
-    //swap arr[i+1] and arr[high] (or pivot)
-    let temp = arr[i + 1];
-    arr[i + 1] = arr[high];
-    arr[high] = temp;
-
-    return i + 1;
-  }
+  
 }
