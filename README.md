@@ -1,7 +1,9 @@
 # LocaMall
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
-
+LocaMall is an online platform to buy and sell local products.
+It uses sorting and searching algorithms to generate popular products and sellers in the user locality.
+Also it uses factory design pattern to create different sorting patterns for products and sellers.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
