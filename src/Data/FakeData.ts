@@ -6,7 +6,7 @@ export var Products = [
 		name: 'Birthday Cake',
 		price: 20,
 		type: 'product',
-		image: '',
+		image: '../assets/products/birthday-cake.jpg',
 		rate: 2
 	},
 	{
@@ -14,7 +14,7 @@ export var Products = [
 		name: 'Naked Cake',
 		price: 20,
 		type: 'product',
-		image: '',
+		image: '../assets/products/naked-cake.jpg',
 		rate: 4
 	},
 	{
@@ -22,7 +22,7 @@ export var Products = [
 		name: 'Resume',
 		price: 20,
 		type: 'service',
-		image: '',
+		image: '../assets/products/resume.jpg',
 		rate: 3
 	},
 	{
@@ -30,7 +30,7 @@ export var Products = [
 		name: 'Home Design',
 		price: 120,
 		type: 'service',
-		image: '',
+		image: '../assets/products/home-design.jpg',
 		rate: 5
 	},
 	{
@@ -38,7 +38,7 @@ export var Products = [
 		name: 'Sweets',
 		price: 40,
 		type: 'product',
-		image: '',
+		image: '../assets/products/sweets.jpg',
 		rate: 1
 	},
 	{
@@ -46,7 +46,7 @@ export var Products = [
 		name: 'Roll Cakes',
 		price: 20,
 		type: 'product',
-		image: '',
+		image: '../assets/products/roll-cake.jpg',
 		rate: 4
 	},
 	{
@@ -54,7 +54,7 @@ export var Products = [
 		name: 'Cupcake',
 		price: 20,
 		type: 'product',
-		image: '',
+		image: '../assets/products/cupcake.jpg',
 		rate: 3
 	},
 	{
@@ -62,7 +62,7 @@ export var Products = [
 		name: 'Keto Bread',
 		price: 20,
 		type: 'product',
-		image: '',
+		image: '../assets/products/keto-bread.jpg',
 		rate: 4
 	}
 ];
@@ -77,7 +77,7 @@ export const Sellers = [
 		catalog: [
 			Products[0].id, Products[5].id, Products[6].id
 		],
-		image: '',
+		image: '../assets/sellers/bahara.jpg',
 		rate: 5
 	},
 	{
@@ -87,7 +87,7 @@ export const Sellers = [
 		id: '',
 		location: 'Findlay Creek',
 		catalog: [Products[1].id,],
-		image: '',
+		image: '../assets/sellers/maryamh.jpg',
 		rate: 4
 	},
 	{
@@ -97,6 +97,7 @@ export const Sellers = [
 		id: '',
 		location: 'Merivale',
 		catalog: [Products[4].id,],
+		image: '../assets/sellers/gita.jpg',
 		rate: 2
 	},
 	{
@@ -106,7 +107,7 @@ export const Sellers = [
 		id: '',
 		location: 'Orleans',
 		catalog: [Products[2].id,],
-		image: '',
+		image: '../assets/sellers/vahid.jpg',
 		rate: 2
 	},
 	{
@@ -116,7 +117,7 @@ export const Sellers = [
 		id: '',
 		location: 'Findlay Creek',
 		catalog: [],
-		image: '',
+		image: '../assets/sellers/bahara.jpg',
 		rate: 1
 	},
 	{
@@ -126,7 +127,7 @@ export const Sellers = [
 		id: '',
 		location: 'Orleans',
 		catalog: [Products[3].id,],
-		image: '',
+		image: '../assets/sellers/mahvin.jpg',
 		rate: 4
 	},
 	{
@@ -136,7 +137,7 @@ export const Sellers = [
 		id: '',
 		location: 'Orleans',
 		catalog: [Products[7].id,],
-		image: '',
+		image: '../assets/sellers/maryamt.jpg',
 		rate: 3
 
 	}

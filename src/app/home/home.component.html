@@ -4,7 +4,7 @@
         <h6 class="mb-3 font-weight-bold text-nowrap">Popular in your locality</h6>
         <div id="pop-in-loc" class="row justify-content-start flex-nowrap m-0 p-2 border rounded-lg">
             <div *ngFor="let card of localProductsCards, index as i" class="card mr-3" style="min-width: 150px;">
-                <img src="popular-local/cake1.jpeg" class="card-img-top img-thumbnail rounded"
+                <img src="{{card.productImage}}" class="card-img-top img-thumbnail rounded"
                     style="height: 145px; width:auto" alt="" />
                 <div class="card-body">
                     <h6 class="card-text text-center">{{card.productName}}</h6>
@@ -19,7 +19,7 @@
         <h6 class="mb-3 font-weight-bold text-nowrap">Popular sellers</h6>
         <div id="pop-in-loc" class="row justify-content-start flex-nowrap m-0 p-2 border rounded-lg">
             <div *ngFor="let card of popularSellersCards" class="card mr-3" style="min-width: 150px;">
-                <img src="popular-local/cake1.jpeg" class="card-img-top img-thumbnail rounded"
+                <img src="{{card.sellerImage}}" class="card-img-top img-thumbnail rounded"
                     style="height: 145px; width:auto" alt="" />
                 <div class="card-body">
                     <h6 class="card-text text-center">{{card.sellerFirstName}}</h6>
@@ -90,7 +90,7 @@
 
     <div class="story d-flex justify-content-start px-4 pt-5 pb-4 mx-auto border rounded-lg overflow-x-hidden">
         <h5 class="greeting font-italic font-weight-bold px-3">Hi, I am Maria</h5>
-        <img src="sellers/seller1.webp" alt="maria" class="image-fluid col-md-3 p-1 border rounded"
+        <img src="../assets/sellers/maria.jpg" alt="maria" class="image-fluid col-md-3 p-1 border rounded"
             style="min-height: 160px; min-width:210px; max-height: 160px; max-width:210px" />
         <blockquote class=" ml-4 my-1 text-break font-italic">Lorem ipsum dolor sit amet consectetur adipisicing
             elit.
@@ -102,10 +102,10 @@
                     page!</a></span></blockquote>
     </div>
 
-    <div class="ad text-right px-4 pt-4 pb-4 mx-auto border rounded-lg overflow-x-hidden mt-3 mb-5">
+    <div class="ad text-right px-4 pt-4 pb-4 mx-auto border rounded-lg overflow-x-hidden mt-3 mb-5" style="background-color: #6f42c1">
         <h2 class="text-warning font-weight-bold">make money ON your TALENT</h2>
         <a href="#" class="ml-5 font-italic">
-            <span class="text-right mr-0">see how</span>
+            <span class="text-right mr-0" style="color: orange">see how</span>
         </a>
     </div>
 </main>
