@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
       if (product.id == id) return product;
     }
   }
-  
+
 
   createPopularSellersCards() {
     for (let seller of this.allSellers) {
@@ -71,11 +71,13 @@ export class HomeComponent implements OnInit {
       let sellerImage = seller.image;
       let rate = seller.rate;
       this.popularSellersCards.push({ sellerFirstName, sellerImage, rate });
-      console.log(JSON.stringify(this.popularSellersCards))
       let sf = new SortFactory(SortIndex.SELLER);
       let sortMethod = sf.createSortMethod();
-      sortMethod.sortList(this.localProductsCards);
-      console.log(JSON.stringify(this.popularSellersCards))
+      sortMethod.sortList(this.popularSellersCards);
+      //get the first six popular sellers
+      if (this.popularSellersCards.length > 6) {
+        this.popularSellersCards.length = 6;
+      }
     }
   }
 
