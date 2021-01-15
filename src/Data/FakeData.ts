@@ -19,7 +19,7 @@ export var Products = [
 	},
 	{
 		id: 'vahid098028340298502',
-		name: 'Resume',
+		name: 'Resume Writing',
 		price: 20,
 		type: 'service',
 		image: '../assets/products/resume.jpg',
@@ -78,17 +78,17 @@ export const Sellers = [
 			Products[0].id, Products[5].id, Products[6].id
 		],
 		image: '../assets/sellers/bahara.jpg',
-		rate: 5
+		rate: 4,
 	},
 	{
-		firstName: 'Maryam',
+		firstName: 'Mary',
 		lastName: 'Haerian',
 		username: 'mhaeri',
 		id: '',
 		location: 'Findlay Creek',
 		catalog: [Products[1].id,],
 		image: '../assets/sellers/maryamh.jpg',
-		rate: 4
+		rate: 5
 	},
 	{
 		firstName: 'Gita',
@@ -101,9 +101,9 @@ export const Sellers = [
 		rate: 2
 	},
 	{
-		firstName: 'Vahid',
-		lastName: 'Pilechi',
-		username: 'vpilechi',
+		firstName: 'Tim',
+		lastName: 'Cook',
+		username: 'tcook',
 		id: '',
 		location: 'Orleans',
 		catalog: [Products[2].id,],

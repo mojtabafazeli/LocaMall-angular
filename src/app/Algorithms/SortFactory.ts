@@ -4,15 +4,14 @@ import { SortMethod } from "./SortMethod";
 import { SortByProductRate } from "./SoryByProductRate";
 
 export class SortFactory { 
-    constructor(public prop: SortIndex = null) {
-        this.prop = prop;
+    constructor() {
     }
 
-    createSortMethod(): SortMethod {
-        if (this.prop == SortIndex.PRODUCT) {
+    createSortMethod(prop: SortIndex): SortMethod {
+        if (prop === SortIndex.PRODUCT) {
             return new SortByProductRate()
-        } else if (this.prop == SortIndex.SELLER) {
+        } else if (prop === SortIndex.SELLER) {
             return new SortBySellerRate();
-        }
+        } 
     }
 }

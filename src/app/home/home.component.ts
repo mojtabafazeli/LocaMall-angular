@@ -19,11 +19,11 @@ export class HomeComponent implements OnInit {
   localSellers: Seller[];
   localProductsCards: ProductCard[] = [];
   popularSellersCards: SellerCard[] = [];
+  sf = new SortFactory();
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(Products)
     this.createLocalProductsCards();
     this.createPopularSellersCards();
   }
@@ -37,12 +37,13 @@ export class HomeComponent implements OnInit {
         let productName = product.name;
         let productImage = product.image;
         let productRate = product.rate;
-        this.localProductsCards.push({ sellerFirstName, productName, productImage, productRate })
+        this.localProductsCards.push({ productName, sellerFirstName, productImage, productRate })
       }
     }
-    let sf = new SortFactory(SortIndex.PRODUCT);
-    let sortMethod = sf.createSortMethod();
+    console.table(this.localProductsCards);
+    let sortMethod = this.sf.createSortMethod(SortIndex.PRODUCT);
     sortMethod.sortList(this.localProductsCards);
+    console.table(this.localProductsCards);
   }
 
   getLocalSellers() {
@@ -53,6 +54,9 @@ export class HomeComponent implements OnInit {
       seller.location == userLocation
     );
     this.localSellers = [...s];
+    console.table(this.localSellers);
+    console.table(this.allSellers[0].catalog);
+    console.table(this.allProducts);
   }
 
   // implementing Linear Search algorithm 
@@ -71,14 +75,16 @@ export class HomeComponent implements OnInit {
       let sellerImage = seller.image;
       let rate = seller.rate;
       this.popularSellersCards.push({ sellerFirstName, sellerImage, rate });
-      let sf = new SortFactory(SortIndex.SELLER);
-      let sortMethod = sf.createSortMethod();
-      sortMethod.sortList(this.popularSellersCards);
-      //get the first six popular sellers
-      if (this.popularSellersCards.length > 6) {
-        this.popularSellersCards.length = 6;
-      }
     }
+    console.table(this.popularSellersCards);
+    let sortMethod = this.sf.createSortMethod(SortIndex.SELLER);
+    console.log(JSON.stringify(sortMethod));
+    sortMethod.sortList(this.popularSellersCards);
+    //get the first six popular sellers
+    if (this.popularSellersCards.length > 6) {
+      this.popularSellersCards.length = 6;
+    }
+    console.table(this.popularSellersCards);
   }
 
 }
