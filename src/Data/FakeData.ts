@@ -56,6 +56,14 @@ export var Products = [
 		type: 'product',
 		image: '',
 		rate: 3
+	},
+	{
+		id: 'mtaba35245243523452',
+		name: 'Keto Bread',
+		price: 20,
+		type: 'product',
+		image: '',
+		rate: 4
 	}
 ];
 
@@ -115,6 +123,16 @@ export const Sellers = [
 		location: 'Orleans',
 		catalog: [Products[3].id,],
 		rate: 4
+	},
+	{
+		firstName: 'Maryam',
+		lastName: 'Taba',
+		username: 'mtaba',
+		id: '',
+		location: 'Orleans',
+		catalog: [Products[7].id,],
+		rate: 4
+
 	}
 ];
 

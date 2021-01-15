@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(Products)
     this.createLocalProductsCards();
   }
 
@@ -61,5 +62,5 @@ export class HomeComponent implements OnInit {
       if (product.id == id) return product;
     }
   }
-  
+
 }
