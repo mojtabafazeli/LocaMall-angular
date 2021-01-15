@@ -1,4 +1,4 @@
-export default class Card {
+export default class ProductCard {
 
     constructor(
         public productName: string,

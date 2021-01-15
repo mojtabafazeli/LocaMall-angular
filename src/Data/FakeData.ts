@@ -77,7 +77,8 @@ export const Sellers = [
 		catalog: [
 			Products[0].id, Products[5].id, Products[6].id
 		],
-		rate: 4
+		image: '',
+		rate: 5
 	},
 	{
 		firstName: 'Maryam',
@@ -86,6 +87,7 @@ export const Sellers = [
 		id: '',
 		location: 'Findlay Creek',
 		catalog: [Products[1].id,],
+		image: '',
 		rate: 4
 	},
 	{
@@ -95,7 +97,7 @@ export const Sellers = [
 		id: '',
 		location: 'Merivale',
 		catalog: [Products[4].id,],
-		rate: 4
+		rate: 2
 	},
 	{
 		firstName: 'Vahid',
@@ -104,7 +106,8 @@ export const Sellers = [
 		id: '',
 		location: 'Orleans',
 		catalog: [Products[2].id,],
-		rate: 4
+		image: '',
+		rate: 2
 	},
 	{
 		firstName: 'Fereshteh',
@@ -113,7 +116,8 @@ export const Sellers = [
 		id: '',
 		location: 'Findlay Creek',
 		catalog: [],
-		rate: 4
+		image: '',
+		rate: 1
 	},
 	{
 		firstName: 'Mahvin',
@@ -122,6 +126,7 @@ export const Sellers = [
 		id: '',
 		location: 'Orleans',
 		catalog: [Products[3].id,],
+		image: '',
 		rate: 4
 	},
 	{
@@ -131,7 +136,8 @@ export const Sellers = [
 		id: '',
 		location: 'Orleans',
 		catalog: [Products[7].id,],
-		rate: 4
+		image: '',
+		rate: 3
 
 	}
 ];

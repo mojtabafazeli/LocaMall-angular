@@ -1,7 +1,7 @@
 <main id id="content" class="container px-0">
     <app-searchbar></app-searchbar>
     <div class="pop-in-loc d-flex flex-column justify-content-center p-0 mt-5 mx-auto overflow-hidden">
-        <h6 class="mb-3 font-weight-bold text-nowrap">Popular in your local</h6>
+        <h6 class="mb-3 font-weight-bold text-nowrap">Popular in your locality</h6>
         <div id="pop-in-loc" class="row justify-content-start flex-nowrap m-0 p-2 border rounded-lg">
             <div *ngFor="let card of localProductsCards, index as i" class="card mr-3" style="min-width: 150px;">
                 <img src="popular-local/cake1.jpeg" class="card-img-top img-thumbnail rounded"
@@ -13,9 +13,22 @@
                 </div>
             </div>
         </div>
-
     </div>
-    <div class="pop-in-town d-flex flex-column justify-content-center p-0 mt-5 mx-auto overflow-hidden">
+
+    <div class="pop-in-loc d-flex flex-column justify-content-center p-0 mt-5 mx-auto overflow-hidden">
+        <h6 class="mb-3 font-weight-bold text-nowrap">Popular sellers</h6>
+        <div id="pop-in-loc" class="row justify-content-start flex-nowrap m-0 p-2 border rounded-lg">
+            <div *ngFor="let card of popularSellersCards" class="card mr-3" style="min-width: 150px;">
+                <img src="popular-local/cake1.jpeg" class="card-img-top img-thumbnail rounded"
+                    style="height: 145px; width:auto" alt="" />
+                <div class="card-body">
+                    <h6 class="card-text text-center">{{card.sellerFirstName}}</h6>
+                    <!-- <h6 class="card-text text-center font-weight-bold">{{card.rate}}</h6> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="pop-in-town d-flex flex-column justify-content-center p-0 mt-5 mx-auto overflow-hidden">
         <h6 class="mb-3 font-weight-bold text-nowrap">Popular in your town</h6>
         <div id="pop-in-town" class="row justify-content-start flex-nowrap m-0 p-2 border rounded-lg">
             <div class="card mr-3" style="min-width: 150px;">
@@ -73,7 +86,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="story d-flex justify-content-start px-4 pt-5 pb-4 mx-auto border rounded-lg overflow-x-hidden">
         <h5 class="greeting font-italic font-weight-bold px-3">Hi, I am Maria</h5>

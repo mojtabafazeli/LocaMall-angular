@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Sellers, Users, Products } from 'src/Data/FakeData';
-import Card from 'src/Model/Card';
+import ProductCard from 'src/Model/ProductCard';
 import Seller from 'src/Model/Seller';
+import SellerCard from 'src/Model/SellerCard';
 import { SortFactory } from '../Algorithms/SortFactory';
 import { SortIndex } from '../Algorithms/SortIndex';
 
@@ -16,13 +17,15 @@ export class HomeComponent implements OnInit {
   allSellers = Sellers;
   allProducts = Products;
   localSellers: Seller[];
-  localProductsCards: Card[] = [];
+  localProductsCards: ProductCard[] = [];
+  popularSellersCards: SellerCard[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
     console.log(Products)
     this.createLocalProductsCards();
+    this.createPopularSellersCards();
   }
 
   createLocalProductsCards() {
@@ -37,11 +40,9 @@ export class HomeComponent implements OnInit {
         this.localProductsCards.push({ sellerFirstName, productName, productImage, productRate })
       }
     }
-    console.log(JSON.stringify(this.localProductsCards))
     let sf = new SortFactory(SortIndex.PRODUCT);
     let sortMethod = sf.createSortMethod();
     sortMethod.sortList(this.localProductsCards);
-    console.log(JSON.stringify(this.localProductsCards))
   }
 
   getLocalSellers() {
@@ -60,6 +61,21 @@ export class HomeComponent implements OnInit {
     for (let i = 0; i < products.length; i++) {
       let product = products[i];
       if (product.id == id) return product;
+    }
+  }
+  
+
+  createPopularSellersCards() {
+    for (let seller of this.allSellers) {
+      let sellerFirstName = seller.firstName;
+      let sellerImage = seller.image;
+      let rate = seller.rate;
+      this.popularSellersCards.push({ sellerFirstName, sellerImage, rate });
+      console.log(JSON.stringify(this.popularSellersCards))
+      let sf = new SortFactory(SortIndex.SELLER);
+      let sortMethod = sf.createSortMethod();
+      sortMethod.sortList(this.localProductsCards);
+      console.log(JSON.stringify(this.popularSellersCards))
     }
   }
 
